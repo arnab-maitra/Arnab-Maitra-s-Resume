@@ -1,0 +1,202 @@
+
+\documentclass[a4paper, 10pt]{article}
+\paperheight 30.7cm
+\usepackage{url}
+\usepackage{parskip} 	
+\usepackage{graphicx}
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{academicons}
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+\begin{tabularx}{\linewidth}{@{}m{0.75\textwidth} m{0\textwidth}@{}}
+{
+    \huge \textbf {Arnab Maitra} \newline
+    \small{
+    % \begin{align}
+    % \end{align}
+        \clink{
+            
+            \faAt \hspace{0.1cm}\href{mailto:arnabmaitra11@gmail.com}{arnabmaitra11@gmail.com}
+            \newline
+            \faPhone \hspace{0.1cm} \href{tel:916295089738}{+916295089738}
+            \newline
+            \faLink \hspace{0.1cm} \href{https://portfolio-arnabmaitra.netlify.app/}{Portfolio Website}
+            \newline
+            \faLinkedin \hspace{0.1cm} \href{https://www.linkedin.com/in/-arnabmaitra/}{LinkedIn}
+            \newline
+            \faGithub \hspace{0.1cm} \href{https://github.com/arnab-maitra}{Github}
+            \newline
+             \faMapMarker \hspace{0.1cm} \href{https://www.google.com/maps/place/Durgapur,+West+Bengal/@23.6835171,86.9942756,12z/data=!3m1!4b1!4m6!3m5!1s0x39f71f0ea1022529:0xf888f7e7fd11cefe!8m2!3d23.6888636!4d86.9660638!16zL20vMDNtZHQz?entry=ttu}{Durgapur - 713213, West Bengal, India}
+        } \newline
+    }
+}
+& 
+{
+    \includegraphics[width=4cm]{photo.png}
+}
+\end{tabularx}
+
+
+%----------------------------------------------------------------------------------------
+
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+%Interests/ Keywords/ Summary
+%\section{SUMMARY}
+
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Programming Languages: }{Java, Python, HTML, CSS, Javascript, Latex}\\ \textbf{IT Constructs: }{Fundamentals of Cybersecurity, Operating System, Networking, Azure, Power Platform, DBMS}\\ \textbf{DB Language: }{SQL}\\ \textbf{Tools: }{Visual Studio, Cisco Packet Tracer, MySQL}
+\end{tabularx}
+%----------------------------------------------------------------------------------------
+%Experience
+\section{Experiences}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Celebal Technologies (May 2023 - Jul 2023)} & \hfill {\textit {\textbf{}}} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{\textit{Worked as a Cloud Infra \& Security Intern. Implemented Cloud Security measures to safeguard cloud deployments using Microsoft Azure.}}
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+\textbf{\textit{2020 - Present}} & {B. Tech in CSE from Asansol Engineering College, Asansol} \hfill  \textbf{[CGPA: 8.85 upto 6th Semester]}\\
+\textbf{\textit{2018 - 2020}} & {12th Standard (WBCHSE) from Bidhan Chandra Institution, Durgapur} \hfill \normalsize \textbf{[72 \%]} \\
+\textbf{\textit{2007 - 2018}} & {10th Standard (ICSE) from St. Xavier's School, Durgapur} \hfill \normalsize \textbf{[75 \%]} \\
+
+\end{tabularx}
+
+
+%Projects
+\section{Projects}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Best Feature Selection of Breast Cancer Diagnosis using Machine Learning (Jul 2023 - Ongoing)} & \hfill \href{https://github.com/arnab-maitra/Best-Feature-Selection-of-Breast-cancer-Diagnosis-using-Machine-Learning}{Repository} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{\textit{Implemented Light GBM algorithm for swift identification of breast cancer tumors as benign or malignant. Utilized swarm plots and heat maps for decision-making visualization. Compared model performance with Logistic Regression, Gradient Boosting, Random Forest, and XG Boost algorithms. Prioritized early diagnosis for improved patient outcomes.}}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Keylogger (Feb 2023 - Feb 2023)} & \hfill \href{https://github.com/arnab-maitra/Keylogger}{Repository} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{\textit{Keylogger is designed for ethical use in IT organizations. It records keystrokes to troubleshoot technical issues in computer systems and business networks. Emphasizing on responsible usage and diverging from the typical association with malicious intent, it aids in detecting unauthorized access or unusual behavior, ensuring security.}}  \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%Publications
+\section{Publications}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Journal Publications} & \hfill \href{}{} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{\textit{{Vedatrayee Chatterjee, \textbf{Arnab Maitra}, Soubhik Ghosh, Hritik Banerjee, Subhadeep Puitandi, Ankita Mukherjee, "An efficient approach for breast cancer classification using machine learning", Journal of Decision Analytics and Intelligent Computing, Vol. 4, Issue 1, 32-46, 2024, ISSN: 2787-2572, DOI: \href{https://doi.org/10.31181/jdaic10028012024c}{https://doi.org/10.31181/jdaic10028012024c}}}}  \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%Certifications
+\section{Certifications}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+{Foundations of Cybersecurity from Google.}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+{Microsoft Certified in Azure Fundamentals.} \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+{Microsoft Certified in Power Platform Fundamentals}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+ The Bits and Bytes of Networking from Google. \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+Introduction to Cybersecurity Tools \& Cyber Attacks from IBM.  \\
+\end{tabularx}
+
+%\section{Workshops And Training}
+
+%\begin{tabularx}{\linewidth}{ @{}l r@{} }
+%\textbf{Delegate at Young Leader's Summit,VISTA'23 by IIM BANGALORE (Biggest International Business Fest)  } & \hfill \href{}{} \\[1.75pt]
+%\textbf{Fundraiser Volunteer of an NGO (Muskurahat Foundation) } & \hfill \href{}{} \\[1.75pt]
+%\textbf{District level Swimmer} & \hfill \href{}{} \\[1.75pt]
+%\textbf{Elocutionist} & \hfill \href{}{} \\[1.75pt]
+
+%\multicolumn{2}{@{}X@{}}{\textit{ 
+%\textbf{}}}  \\
+%\end{tabularx}
+
+%\begin{tabularx}{\linewidth}{ @{}l r@{} }
+%\multicolumn{2}{@{}X@{}}{\textit{
+%\textbf{} }}  \\
+%\end{tabularx}
+
+\vfill
+
+\end{document}
